@@ -34,3 +34,16 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 
 colorscheme gruvbox
 set bg=dark
+
+set encoding=utf-8
+
+set number
+set ruler
+set cc=80
+
+set incsearch
+set showmatch
+set hlsearch
+
+set tabstop=4
+set shiftwidth=4
