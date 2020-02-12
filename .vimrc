@@ -30,7 +30,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " Files to ignore during fuzzy search
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|coverage)|(\.(swp|ico|git|svn))$'
 
 colorscheme gruvbox
 set bg=dark
