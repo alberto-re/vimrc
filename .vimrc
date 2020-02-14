@@ -9,10 +9,10 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 Plugin 'kien/ctrlp.vim'
-
 Plugin 'morhetz/gruvbox'
+
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -47,3 +47,5 @@ set hlsearch
 
 set tabstop=4
 set shiftwidth=4
+
+set mouse=a
