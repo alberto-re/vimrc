@@ -10,9 +10,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'morhetz/gruvbox'
-
 Plugin 'fatih/vim-go'
+Plugin 'editorconfig/editorconfig-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -29,17 +28,13 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+let g:ctrlp_user_command = 'find %s -type f -not -path "*node_modules/*" -not -path "coverage/" -not -path "build/"'
 " Files to ignore during fuzzy search
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|coverage)|(\.(swp|ico|git|svn))$'
-
-colorscheme gruvbox
-set bg=dark
 
 set encoding=utf-8
 
 set number
-set ruler
-set cc=80
 
 set incsearch
 set showmatch
@@ -47,5 +42,6 @@ set hlsearch
 
 set tabstop=4
 set shiftwidth=4
+set autoindent
 
 set mouse=a
