@@ -36,9 +36,6 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|coverage)|(\.(swp|i
 
 let g:rainbow_active = 1
 
-let g:EditorConfig_core_mode = 'external_command'
-let g:EditorConfig_exec_path = '/usr/bin/editorconfig'
-
 " Toggle lightline
 set laststatus=2
 
