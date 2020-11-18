@@ -29,7 +29,6 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|coverage)|(\.(swp|i
 set laststatus=2
 
 set encoding=utf-8
-set number
 set nowrap
 
 set incsearch
