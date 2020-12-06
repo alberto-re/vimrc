@@ -43,3 +43,5 @@ set fixeol
 
 autocmd FileType javascript nnoremap <F2> :!npm run lint<CR>
 autocmd FileType javascript nnoremap <F3> :!npm run test<CR>
+
+nnoremap <F4> :!%:p<CR>
