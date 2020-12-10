@@ -12,6 +12,7 @@ Plugin 'fatih/vim-go'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'posva/vim-vue'
+Plugin 'psf/black'
 
 call vundle#end()
 filetype plugin indent on
