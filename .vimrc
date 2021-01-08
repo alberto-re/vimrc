@@ -13,6 +13,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'posva/vim-vue'
 Plugin 'psf/black'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
@@ -44,5 +45,8 @@ set fixeol
 
 autocmd FileType javascript nnoremap <F2> :!npm run lint<CR>
 autocmd FileType javascript nnoremap <F3> :!npm run test<CR>
+
+autocmd FileType python nnoremap <F2> :Black<CR>
+autocmd FileType python nnoremap <F3> :!pytest<CR>
 
 nnoremap <F4> :!%:p<CR>
