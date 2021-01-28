@@ -18,6 +18,8 @@ Plugin 'tpope/vim-fugitive'
 call vundle#end()
 filetype plugin indent on
 
+syntax on
+
 " Gruvbox options
 autocmd vimenter * colorscheme gruvbox
 set bg=dark
@@ -31,7 +33,8 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|coverage)|(\.(swp|i
 set laststatus=2
 
 set encoding=utf-8
-set nowrap
+set wrap
+set nu
 
 set incsearch
 set smartcase
@@ -42,6 +45,12 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 set fixeol
+
+" Learn h,j,k,l movement keys the hard way
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 autocmd FileType javascript nnoremap <F2> :!npm run lint<CR>
 autocmd FileType javascript nnoremap <F3> :!npm run test<CR>
