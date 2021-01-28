@@ -1,18 +1,15 @@
 set nocompatible
-filetype off
+filetype off 
 
 " Vundle and plugins declaration
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'morhetz/gruvbox'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'itchyny/lightline.vim'
-Plugin 'posva/vim-vue'
-Plugin 'psf/black'
 Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
@@ -20,17 +17,22 @@ filetype plugin indent on
 
 syntax on
 
-" Gruvbox options
-autocmd vimenter * colorscheme gruvbox
-set bg=dark
-let g:gruvbox_contrast_dark = 'hard'
-
-" CTRLP options
+" CTRLP
 let g:ctrlp_user_command = 'find %s -type f -not -path "*node_modules/*" -not -path "coverage" -not -path "build"'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|coverage)|(\.(swp|ico|git|svn))$'
 
-" Toggle lightline
+" Lightline
 set laststatus=2
+set noshowmode
+let g:lightline = { 
+      \ 'colorscheme': 'powerline',
+      \ 'active': {
+      \   'left': [ [ 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+      \  'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype' ] ] 
+      \ }
+      \ }
 
 set encoding=utf-8
 set wrap
