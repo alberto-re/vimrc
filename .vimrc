@@ -1,5 +1,5 @@
 set nocompatible
-filetype off 
+filetype off
 
 " Vundle and plugins declaration
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -11,6 +11,7 @@ Plugin 'fatih/vim-go'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/AutoComplPop'
 
 call vundle#end()
 filetype plugin indent on
@@ -18,19 +19,18 @@ filetype plugin indent on
 syntax on
 
 " CTRLP
-let g:ctrlp_user_command = 'find %s -type f -not -path "*node_modules/*" -not -path "coverage" -not -path "build"'
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|coverage)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " Lightline
 set laststatus=2
 set noshowmode
-let g:lightline = { 
+let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
       \  'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype' ] ] 
+      \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ }
       \ }
 
